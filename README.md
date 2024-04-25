@@ -19,7 +19,7 @@ chmod u=rwx build_table.sh
 ```
 This will generate a table either for velocity/scalar/ibm variables, depending on the netcdf file provided.
 
-Third, merge the all pdf-files with:
+Third, merge all pdf-files with:
 ```shell
 pdfunite a.pdf b.pdf merge.pdf
 ```
