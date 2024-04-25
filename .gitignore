@@ -1,8 +1,9 @@
 logs*/*
-netcdf*/*
+netcdf/*
 *.aux
 *.log
-*.tex
+var_list.tex
+tab*.tex
 *.gz
 *.fls
 *.*latexmk
