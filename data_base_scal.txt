@@ -1,0 +1,88 @@
+rS     & Mean                   & scalar (RA) & \ra{s} \\
+rQ     & Mean                   & & \\
+rS_y   & Mean                   & y-derivative of scalar (RA) & \ra{\p_y s} \\
+fS     & Mean                   & scalar (FA) & \fa{s} \\
+fS_y   & Mean                   & y-derivative of scalar (FA) & \fa{\p_y s}  \\
+fQ     & Mean                   & & \\
+
+Rsu    & Fluctuations           & covariance $R_{su}$ (of scalar $s$ and velocity $u$) & \ra{s^\prime u^\prime} \\
+Rsv    & Fluctuations           & covariance $R_{sv}$ (of scalar $s$ and velocity $v$) & \ra{s^\prime v^\prime} \\
+Rsw    & Fluctuations           & covariance $R_{sw}$ (of scalar $s$ and velocity $w$) & \ra{s^\prime w^\prime} \\
+rS2    & Fluctuations           & scalar variance $R_{ss}$ (RA) & \ra{s^\prime s^\prime}  \\
+rS3    & Fluctuations           &  & \ra{s^\prime s^\prime s^\prime} \\
+rS4    & Fluctuations           &  & \ra{s^\prime s^\prime s^\prime s^\prime} \\
+fS2    & Fluctuations           & scalar variance  (FA) & \fa{s^\prime s^\prime}  \\
+fS3    & Fluctuations           &  & \fa{s^\prime s^\prime s^\prime} \\
+fS4    & Fluctuations           &  & \fa{s^\prime s^\prime s^\prime s^\prime} \\
+
+Rss_t  & RssBudget              & Time-rate of change of $R_{ss}$ & \ra{\p_t R_{ss}} \\
+Css    & RssBudget              & advection in y-direction & $-$\fa{v} $\p_y$\ra{s^\prime s^\prime} \\ 
+Pss    & RssBudget              & gradient production & $-2$\ra{s^\prime v^\prime}$\p_y$\fa{s} \\ 
+Ess    & RssBudget              & molecular dissipation & \\
+Tssy1  & RssBudget              & turbulent transport due to triple correlation & \ra{s^\prime s^\prime v^\prime}\\
+Tssy2  & RssBudget              & transport & $-2\kappa_d$\ra{s^\prime \partial_y s^\prime} \\
+Tssy_y & RssBudget              & turbulent transport & $\partial_y (\text{Tssy1} + \text{Tssy2})$\\
+Dss    & RssBudget              & diffusion variable-density term & \\ 
+Qss    & RssBudget              & source & \\ 
+             
+Rsu_t  & RsuBudget              & Time-rate of change of $R_{su}$ & \ra{\p_t R_{su}} \\ 
+Csu    & RsuBudget              & advection in y-direction & $-$\fa{v} $\p_y$\ra{s^\prime u^\prime}\\
+Psu    & RsuBudget              & shear and gradient production & $-$\ra{s^\prime v^\prime}$\p_y$\fa{u} $-$\ra{u^\prime v^\prime}$\p_y$\fa{s}\\
+Esu    & RsuBudget              & molecular dissipation & \\
+PIsu   & RsuBudget              & pressure redistribution & $\overline{p^\prime \p_x  s^\prime}$ \\ 
+Tsuy1  & RsuBudget              & turbulent transport  due to triple correlation & \ra{s^\prime u^\prime v^\prime}  \\  
+Tsuy2  & RsuBudget              & transport & \\ % $\nu \overline{(\p_x v + \p_y u)}^\prime s^\prime$ \\ 
+Tsuy_y & RsuBudget              & turbulent transport &  $\partial_y (\text{Tsuy1} + \text{Tsuy2})$ \\ 
+Dsu    & RsuBudget              & diffusion variable-density term & \\ 
+Gsu    & RsuBudget              & pressure-flux & 0\\ 
+Bsu    & RsuBudget              & buoyant production & 0 \\ 
+Fsu    & RsuBudget              & Coriolis production & $f_y$\ra{s^\prime w^\prime} \\ 
+Qsu    & RsuBudget              & source & \\
+             
+Rsv_t  & RsvBudget              & Time-rate of change of $R_{sv}$ & \ra{\p_t R_{sv}} \\ 
+Csv    & RsvBudget              & advection in y-direction & $-$\fa{v} $\p_y$\ra{s^\prime v^\prime} \\   
+Psv    & RsvBudget              & shear and gradient production & $-$\ra{s^\prime v^\prime}$\p_y$\fa{v} $-$\ra{v^\prime v^\prime}$\p_y$\fa{s}\\
+Esv    & RsvBudget              & molecular dissipation & \\ 
+PIsv   & RsvBudget              & pressure redistribution & $\overline{p^\prime \p_y  s^\prime}$ \\ 
+Tsvy1  & RsvBudget              & turbulent transport due to triple correlation & \ra{s^\prime v^\prime v^\prime}  \\   
+Tsvy2  & RsvBudget              & transport & \\ 
+Tsvy3  & RsvBudget              & transport &  $\overline{p^\prime s^\prime}$ \\  
+Tsvy_y & RsvBudget              & turbulent transport &  $\partial_y (\text{Tsvy1} + \text{Tsvy2} + \text{Tsvy3})$\\  
+Dsv    & RsvBudget              & diffusion variable-density term & \\
+Gsv    & RsvBudget              & pressure-flux & \ra{s^\prime \partial_y p^\prime}\\ 
+Bsv    & RsvBudget              & buoyant production & \ra{\rho b^\prime s^\prime } \\ 
+Fsv    & RsvBudget              & Coriolis production & 0\\
+Qsv    & RsvBudget              & source & \\ 
+
+Rsw_t  & RswBudget              & Time-rate of change of $R_{sw}$ & \ra{\p_t R_{sw}} \\ 
+Csw    & RswBudget              & advection in y-direction & $-$\fa{v} $\p_y$\ra{s^\prime w^\prime} \\
+Psw    & RswBudget              & shear and gradient production & $-$\ra{s^\prime v^\prime}$\p_y$\fa{w} $-$\ra{v^\prime w^\prime}$\p_y$\fa{s}\\   
+Esw    & RswBudget              & molecular dissipation & \\ 
+PIsw   & RswBudget              & pressure redistribution & $\overline{p^\prime \p_z  s^\prime}$ \\ 
+Tswy1  & RswBudget              & turbulent transport due to triple correlation & \ra{s^\prime v^\prime w^\prime}  \\       
+Tswy2  & RswBudget              & transport &  \\     
+Tswy_y & RswBudget              & turbulent transport &  $\partial_y (\text{Tswy1} + \text{Tswy2})$\\     
+Dsw    & RswBudget              & diffusion variable-density term & \\   
+Gsw    & RswBudget              & pressure-flux & 0 \\       
+Bsw    & RswBudget              & buoyant production & 0\\
+Fsw    & RswBudget              & Coriolis production & $-f_y$\ra{s^\prime u^\prime}\\  
+Qsw    & RswBudget              & source & \\  
+	
+S_x2   & DerivativeFluctuations & & \ra{(\p_x s^\prime)^2} \\ 
+S_y2   & DerivativeFluctuations & & \ra{(\p_y s^\prime)^2} \\
+S_z2   & DerivativeFluctuations & & \ra{(\p_z s^\prime)^2} \\
+S_x3   & DerivativeFluctuations & & \ra{(\p_x s^\prime)^3} \\
+S_y3   & DerivativeFluctuations & & \ra{(\p_y s^\prime)^3} \\
+S_z3   & DerivativeFluctuations & & \ra{(\p_z s^\prime)^3} \\
+S_x4   & DerivativeFluctuations & & \ra{(\p_x s^\prime)^4} \\
+S_y4   & DerivativeFluctuations & & \ra{(\p_y s^\prime)^4} \\
+S_z4   & DerivativeFluctuations & & \ra{(\p_z s^\prime)^4} \\
+
+Cs1    & CrossScalars           & & \\ 
+Css1   & CrossScalars           & & \\
+
+Sbcs   & Roughness              & Scalar boundary values applied on solids & \\
+eps_0  & Roughness              & Fluid fraction (grid-based approach)     & \\
+eps_1  & Roughness              & Solid fraction (grid-based approach)     & \\
+eps_f  & Roughness              & Fluid fraction (volume-based approach)   & \\
+eps_s  & Roughness              & Solid fraction (volume-based approach)   & \\

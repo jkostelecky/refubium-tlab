@@ -1,0 +1,10 @@
+logs*/*
+netcdf*/*
+*.aux
+*.log
+*.tex
+*.gz
+*.fls
+*.*latexmk
+*.out
+*template.pdf

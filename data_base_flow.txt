@@ -1,0 +1,277 @@
+rR     & Mean & density (RA) & \ra{\rho} \\
+rU     & Mean & u, x-component of the velocity (RA) &  \ra{u} \\
+rV     & Mean & v, y-component of the velocity (RA)&   \ra{v} \\
+rW     & Mean & w, z-component of the velocity (RA)&   \ra{w} \\
+rP     & Mean & $\pi$ dynamic, reduced pressure (RA) & \ra{\pi} \\
+rT     & Mean & $T$, caloric temperature (RA) &        \ra{T} \\
+re     & Mean & $e$, internal energy (RA) &            \ra{e} \\
+rh     & Mean & $h$, enthalpy (RA) &                   \ra{e+(\Gamma_0-1) Ma^2 \frac{p}{\rho}} \\
+rs     & Mean & $s$, entropy (RA)  &                   \ra{s} \\ 
+rB     & Mean & $B$, buoyancy (RA) &                   \ra{B} \\
+fU     & Mean & u, x-component of the velocity (FA)&   \fa{u} \\
+fV     & Mean & v, y-component of the velocity (FA)&   \fa{v} \\
+fW     & Mean & w, z-component of the velocity (FA)&   \fa{w} \\
+fT     & Mean & $T$, caloric Temperature (FA)&         \fa{T} \\
+fe     & Mean & $e$, internal energy (FA)&             \fa{e} \\
+fh     & Mean & $h$, enthalpy (FA)&                    \fa{e+(\Gamma_0-1) Ma^2\frac{p}{\rho}} \\
+fs     & Mean & $s$, entropy (FA)&                     \fa{s} \\
+
+Tke    & Fluctuations & Turbulence kinetic energy        & \ra{\frac12u_{i}^\prime u_{i}^\prime} \\
+Rxx    & Fluctuations & Reynolds stress $R_{11}$         & \ra{u^\prime u^\prime} \\
+Ryy    & Fluctuations & Reynolds stress $R_{22}$         & \ra{v^\prime v^\prime} \\
+Rzz    & Fluctuations & Reynolds stress $R_{33}$         & \ra{w^\prime w^\prime} \\
+Rxy    & Fluctuations & Reynolds stress $R_{12}$         & \ra{u^\prime v^\prime} \\
+Rxz    & Fluctuations & Reynolds stress $R_{13}$         & \ra{u^\prime w^\prime} \\
+Ryz    & Fluctuations & Reynolds stress $R_{23}$         & \ra{v^\prime w^\prime} \\
+rP2    & Fluctuations & Pressure fluctuation (RA)        & \ra{\pi ^\prime \pi^\prime} \\
+rR2    & Fluctuations & Density fluctuation (RA)         & \ra{\rho^\prime \rho^\prime}\\
+rT2    & Fluctuations & Temperature fluctuation (RA)     & \ra{T^\prime T^\prime} \\
+fT2    & Fluctuations & Temperature fluctuation (FA)     & \fa{T^\prime T^\prime} \\
+re2    & Fluctuations & internal energy fluctuation (RA) & \ra{e^\prime e^\prime} \\
+fe2    & Fluctuations & internal energy fluctuation (FA) & \fa{e^\prime e^\prime} \\
+rh2    & Fluctuations & enthalpy fluctuation (RA)        & \ra{h^\prime h^\prime} \\
+fh2    & Fluctuations & enthalpy fluctuation (FA)        & \fa{h^\prime h^\prime} \\
+rs2    & Fluctuations & Entropy fluctuation (RA)         & \ra{s^\prime s^\prime} \\
+fs2    & Fluctuations & Entropy fluctuation (FA)         & \fa{s^\prime s^\prime} \\
+
+Wx     & Vorticity & Vorticity (x-component)    & \ra{\p_z v - \p_y w} \\
+Wy     & Vorticity & Vorticity (y-component)    & \ra{\p_x w - \p_z u} \\
+Wz     & Vorticity & Vorticity (z-component)    & \ra{\p_y u - \p_x v} \\
+Wx2    & Vorticity & Fluctuation of x-Vorticity & \ra{\p_z v^\prime - \p_y w^\prime} \\
+Wy2    & Vorticity & Fluctuation of y-Vorticity & \ra{\p_x w^\prime - \p_z u^\prime} \\
+Wz2    & Vorticity & Fluctuation of z-Vorticity & \ra{\p_y u^\prime - \p_x v^\prime} \\
+
+Rxx_t  & RxxBudget & Time-rate of change of $R_{11}$ & \ra{\p_t R_{11}} \\
+Bxx    & RxxBudget & buoyancy production &  $2b_x$\ra{u^\prime B^\prime}\\
+Cxx    & RxxBudget & advection in y-direction & $-$\ra{v} $\p_y$\ra{u^\prime u^\prime}  \\
+Pxx    & RxxBudget & shear-production & $ -2$ \ra{u^\prime v^\prime} $\p_y$\ra{u}\\
+Exx    & RxxBudget & viscous dissipation & \\ % 2\ra{(\p_x u)^2}+\ra{(\p_yu)^2}+\ra{(\p_zu)^2} \newline{}$-\frac23 $\ra{d \p_xu}+\ra{\p_xv\p_yu}+\ra{\p_xw\p_zu} \\
+PIxx   & RxxBudget & pressure-velocity correlation $\Pi_{11}$  & 2 \ra{u^\prime p^\prime}  \\
+Fxx    & RxxBudget & Coriolis production  & $2 f_y$\ra{u^\prime w^\prime} \\
+Txxy_y & RxxBudget & divergence of $T_{112}$ turbulent transport & $\p_y R_{112}$  \\
+Txxy   & RxxBudget & vertical transport $T_{112}$  & \ra{u^\prime u^\prime v^\prime}$ - 2\nu$\ra{\p_y (u - \langle u\rangle)}  \\
+Gxx    & RxxBudget & pressure variable-density term & 0  \\
+Dxx    & RxxBudget & viscous variable-density term &  \\
+
+Ryy_t  & RyyBudget &  Time-rate of change of $R_{22}$ & \ra{\p_t R_{22}} \\
+Byy    & RyyBudget & buoyancy production of Ryy &  $2b_y$\ra{v^\prime B^\prime}\\
+Cyy    & RyyBudget & advection in y-direction& \ra{v} $\p_y$\ra{v^\prime v^\prime}  \\
+Pyy    & RyyBudget & shear production & $-2$\ra{v^\prime v^\prime}$\p_y$\ra{v}  \\
+Eyy    & RyyBudget & viscous dissipation & \\ % 2\ra{(\p_y v)^2}+\ra{(\p_x v)^2}+\ra{(\p_z v)^2} $-\frac23$\ra{d\p_yv}+\ra{\p_z v\p_yw}+\ra{\p_yw\p_zv}\\
+PIyy   & RyyBudget & pressure--velocity correlation $\Pi_{22}$ & 2\ra{v^\prime p^\prime} \\
+Fyy    & RyyBudget & Coriolis production & 0 \\
+Tyyy_y & RyyBudget & divergence of $T_{222}$ turbulent transport & $\p_y R_{222}$  \\
+Tyyy   & RyyBudget & vertical transport $T_{222}$ & \ra{v^\prime v^\prime v^\prime} + 2\ra{v^\prime p^\prime}$ - 2\nu $\ra{(\p_y v)(v-\langle v\rangle )} \\
+Gyy    & RyyBudget &  pressure variable-density term &  $2 ($\ra{v}--\fa{v}$) \p_y $\ra{p}\\
+Dyy    & RyyBudget & viscous variable-density term &  \\
+
+Rzz_t  & RzzBudget &  Time-rate of change of $R_{33}$ & \ra{\p_t R_{33}} \\  
+Bzz    & RzzBudget & buoyancy production &  $2b_z$\ra{w^\prime B^\prime}\\
+Czz    & RzzBudget & advection in y-direction & $-$\ra{v} $\p_y$ \ra{w^\prime w^\prime}  \\
+Pzz    & RzzBudget & shear production & $-2$\ra{v^\prime w^\prime}$\p_y$ \ra{w}   \\
+Ezz    & RzzBudget & viscous dissipation & \\ % 2\ra{(\p_z w)^2}+\ra{(\p_x w)^2}+\ra{(\p_y w)^2} $-\frac23$\ra{d\p_zw}+\ra{\p_xw\p_zu}+\ra{\p_yw\p_zv} \\
+PIzz   & RzzBudget & pressure--velocity correlation $\Pi_{33}$ & 2\ra{w^\prime p^\prime}  \\
+Fzz    & RzzBudget & Coriolis production of Rzz &  $-2f_y$\ra{u^\prime w^\prime}\\
+Tzzy_y & RzzBudget & divergence of $T_{332}$ turbulent transport & $\p_y R_{332}$  \\
+Tzzy   & RzzBudget & vertical transport $T_{332}$ & \ra{w^\prime w^\prime v^\prime}$-2\nu$\ra{(\p_y w)(w-\langle w \rangle)} \\
+Gzz    & RzzBudget & pressure variable-density term &  0 \\
+Dzz    & RzzBudget & viscous variable-density term &  \\
+
+Rxy_t  & RxyBudget &   Time-rate of change of $R_{12}$ & \ra{\p_t R_{12}} \\ 
+Bxy    & RxyBudget & buoyancy production &  $b_x$\ra{u^\prime B^\prime}$ + b_y$\ra{v^\prime B^\prime}\\
+Cxy    & RxyBudget & advection in y-direction & $-$\ra{v}$\p_y$\ra{u^\prime v^\prime}  \\
+Pxy    & RxyBudget & shear production & $-$\ra{u^\prime v^\prime}$ \p_y $\ra{v}$ - $\ra{v^\prime v^\prime} $\p_y$\ra{u}  \\
+Exy    & RxyBudget & viscous dissipation &  \\
+PIxy   & RxyBudget & pressure-velocity correlation $\Pi_{12}$ & \ra{p^\prime\left(\p_y u - \p_x v\right)}  \\
+Fxy    & RxyBudget & Coriolis production of Rxy &  $f_y$\ra{v^\prime w^\prime}  \\
+Txyy_y & RxyBudget & divergence of $T_{122}$ turbulent transport & $\p_y R_{122}$  \\
+Txyy   & RxyBudget & vertical transport $T_{122}$ & \ra{u^\prime v^\prime v^\prime} +\ra{u^\prime p^\prime} \\
+Gxy    & RxyBudget &  pressure variable-density term & $($\ra{u} -- \fa{u}$)\p_y$\ra{p}  \\
+Dxy    & RxyBudget & viscous variable-density term &  \\
+
+Rxz_t  & RxzBudget &    Time-rate of change of $R_{13}$ & \ra{\p_t R_{13}} \\
+Bxz    & RxzBudget & buoyancy production  &  $b_x$\ra{u^\prime B^\prime}$ + b_z$\ra{u^\prime B^\prime}\\
+Cxz    & RxzBudget & advection in y-direction & $-$\ra{v} $\p_y$\ra{u^\prime w^\prime}  \\
+Pxz    & RxzBudget & shear production & $-$\ra{u^\prime w^\prime} $\p_y$ \ra{w}$-$\ra{v^\prime w^\prime} $\p_y$\ra{u}  \\
+Exz    & RxzBudget & viscous dissipation &  \\
+PIxz   & RxzBudget & pressure--velocity correlation $\Pi_{13}$ & \ra{p^\prime\left(\p_z u - \p_x w\right)}\\
+Fxz    & RxzBudget & Coriolis production  &  $f_y($\ra{w^\prime w^\prime - u^\prime u^\prime}$)$\\
+Txzy_y & RxzBudget & divergence of $T_{132}$ turbulent transport & $\p_y R_{132}$  \\
+Txzy   & RxzBudget & vertical transport $T_{132}$ & \ra{u^\prime w^\prime v^\prime}  \\
+Gxz    & RxzBudget & pressure variable-density term &  0 \\
+Dxz    & RxzBudget & viscous variable-density term &  \\
+
+Ryz_t  & RyzBudget &    Time-rate of change of $R_{23}$ & \ra{\p_t R_{23}} \\
+Byz    & RyzBudget &  buoyancy production  &  $b_y$\ra{v^\prime B^\prime}$ + b_z$\ra{w^\prime B^\prime}\\
+Cyz    & RyzBudget &  advection in y-direction& $-$\ra{v}$\p_y$\ra{v^\prime w^\prime}  \\
+Pyz    & RyzBudget &  shear production & $-$\ra{v^\prime v^\prime} $\p_y$ \ra{w}$ - $\ra{v^\prime w^\prime} $\p_y$\ra{v}  \\
+Eyz    & RyzBudget &  viscous dissipation &  \\
+PIyz   & RyzBudget & pressure--velocity correlation $\Pi_{23}$ & \ra{p^\prime\left( \p_z v - \p_y w  \right) }\\
+Fyz    & RyzBudget & Coriolis production  & $-f_y$\ra{u^\prime v^\prime} \\
+Tyzy_y & RyzBudget & turbulent transport divergence & $\p_y R_{232}$  \\
+Tyzy   & RyzBudget &  vertical transport $T_{232}$ &\ra{v^\prime w^\prime v^\prime} + \ra{w^\prime p^\prime}  \\
+Gyz    & RyzBudget & pressure variable-density term &  $($\ra{w}--\fa{w}$)\p_y $\ra{p}\\
+Dyz    & RyzBudget & viscous variable-density term &  \\ 
+
+Tke_t  & TkeBudget &    Time-rate of change of Tke & \ra{\p_t \frac12 R_{ii}} \\
+Tke    & TkeBudget &  Turbulence kinetic energy &     $\frac12 R_{ii}$ \\ 
+Buo    & TkeBudget &  buoyancy production of Tke &    $\frac12 B_{ii}$ \\ 
+Con    & TkeBudget &  advection in y-direction &      $\frac12 C_{ii}$ \\ 
+Prd    & TkeBudget &  shear production &              $\frac12 P_{ii}$\\
+Eps    & TkeBudget &  dissipation  &                  $\frac12 E_{ii}$\\
+Pi     & TkeBudget &   pressure--velocity correlation& $\frac12 \Pi_{ii}$\\
+Trp    & TkeBudget & sum of transport terms & $\frac12 T_{ii2}$  \\
+Trp1   & TkeBudget & transport due to triple correlation terms & \ra{u_i^\prime u_i^\prime v^\prime} \\
+Trp2   & TkeBudget & transport by pressure--velocity correlation & 2\ra{v'p'} \\
+Trp3   & TkeBudget & viscous transport & $-2\nu$\ra{(\p_y u_i)(u_i-\langle u_i \rangle)} \\
+Trp1_y & TkeBudget & divergence of triple correlations &  $\p_y $\ra{u_{i}^{\prime}u_{i}^\prime v^\prime} \\ 
+Trp2_y & TkeBudget & divergence of pressure--velocity correltion &  $2\p_y$\ra{v^\prime p^\prime}\\
+Trp3_y & TkeBudget & divergence of viscous transport &  $-2\nu \p_y$\ra{(\p_y u_i)(u_i-\langle u_i \rangle )} \\
+G      & TkeBudget & pressure variable-density term &                                 $\frac12 G_{ii}$ \\
+D      & TkeBudget & viscous variable-density term &                                  $\frac12 D_{ii}$ \\ 
+Phi    & TkeBudget & Mean viscous dissipation rate &  \\
+UgradP & TkeBudget &  &                            \ra{u_i \p_{x_i} p} \\ 
+
+rU3    & HigherOrder &  &  \\
+rU4    & HigherOrder &  &  \\
+rV3    & HigherOrder &  &  \\
+rV4    & HigherOrder &  &  \\
+rW3    & HigherOrder &  &  \\
+rW4    & HigherOrder &  &  \\
+
+U_y1          & DerivativeFluctuations &  &  \ra{\p_y u} \\
+V_y1          & DerivativeFluctuations &  &  \ra{\p_y v} \\
+W_y1          & DerivativeFluctuations &  &  \ra{\p_y w} \\
+U_ii2         & DerivativeFluctuations &  &  \\
+U_x2          & DerivativeFluctuations &  &  \ra{(\p_x u^\prime)^2} \\
+U_y2          & DerivativeFluctuations &  &  \ra{(\p_y u^\prime)^2} \\
+U_z2          & DerivativeFluctuations &  &  \ra{(\p_z u^\prime)^2} \\
+V_x2          & DerivativeFluctuations &  &  \ra{(\p_x v^\prime)^2} \\
+V_y2          & DerivativeFluctuations &  &  \ra{(\p_y v^\prime)^2} \\
+V_z2          & DerivativeFluctuations &  &  \ra{(\p_z v^\prime)^2} \\
+W_x2          & DerivativeFluctuations &  &  \ra{(\p_x w^\prime)^2} \\
+W_y2          & DerivativeFluctuations &  &  \ra{(\p_y w^\prime)^2} \\
+W_z2          & DerivativeFluctuations &  &  \ra{(\p_z w^\prime)^2} \\
+U_x3          & DerivativeFluctuations &  &  \ra{(\p_x u^\prime)^3} \\
+U_y3          & DerivativeFluctuations &  &  \ra{(\p_y u^\prime)^3} \\
+U_z3          & DerivativeFluctuations &  &  \ra{(\p_z u^\prime)^3} \\
+V_x3          & DerivativeFluctuations &  &  \ra{(\p_x v^\prime)^3} \\
+V_y3          & DerivativeFluctuations &  &  \ra{(\p_y v^\prime)^3} \\
+V_z3          & DerivativeFluctuations &  &  \ra{(\p_z v^\prime)^3} \\
+W_x3          & DerivativeFluctuations &  &  \ra{(\p_x w^\prime)^3} \\
+W_y3          & DerivativeFluctuations &  &  \ra{(\p_y w^\prime)^3} \\
+W_z3          & DerivativeFluctuations &  &  \ra{(\p_z w^\prime)^3} \\
+U_x4          & DerivativeFluctuations &  &  \ra{(\p_x u^\prime)^4} \\
+U_y4          & DerivativeFluctuations &  &  \ra{(\p_y u^\prime)^4} \\
+U_z4          & DerivativeFluctuations &  &  \ra{(\p_z u^\prime)^4} \\
+V_x4          & DerivativeFluctuations &  &  \ra{(\p_x v^\prime)^4} \\
+V_y4          & DerivativeFluctuations &  &  \ra{(\p_y v^\prime)^4} \\
+V_z4          & DerivativeFluctuations &  &  \ra{(\p_z v^\prime)^4} \\
+W_x4          & DerivativeFluctuations &  &  \ra{(\p_x w^\prime)^4} \\
+W_y4          & DerivativeFluctuations &  &  \ra{(\p_y w^\prime)^4} \\
+W_z4          & DerivativeFluctuations &  &  \ra{(\p_z w^\prime)^4} \\ 
+VarDilatation & DerivativeFluctuations &  Variance of Dilatation & \ra{(\p_{x_i} u_i - \p_y \overline{v})^2}  \\
+VarUx         & DerivativeFluctuations &  & \ra{(\p_x u^\prime)^2} \\
+VarUy         & DerivativeFluctuations &  & \ra{(\p_y u^\prime)^2} \\
+VarUz         & DerivativeFluctuations &  & \ra{(\p_z u^\prime)^2} \\
+VarVx         & DerivativeFluctuations &  & \ra{(\p_x v^\prime)^2} \\
+VarVy         & DerivativeFluctuations &  & \ra{(\p_y v^\prime)^2} \\
+VarVz         & DerivativeFluctuations &  & \ra{(\p_z v^\prime)^2} \\
+VarWx         & DerivativeFluctuations &  & \ra{(\p_x w^\prime)^2} \\
+VarWy         & DerivativeFluctuations &  & \ra{(\p_y w^\prime)^2} \\
+VarWz         & DerivativeFluctuations &  & \ra{(\p_z w^\prime)^2} \\
+SkewUx        & DerivativeFluctuations &  &  \\
+SkewUy        & DerivativeFluctuations &  &  \\
+SkewUz        & DerivativeFluctuations &  &  \\
+SkewVx        & DerivativeFluctuations &  &  \\
+SkewVy        & DerivativeFluctuations &  &  \\
+SkewVz        & DerivativeFluctuations &  &  \\
+SkewWx        & DerivativeFluctuations &  &  \\
+SkewWy        & DerivativeFluctuations &  &  \\
+SkewWz        & DerivativeFluctuations &  &  \\
+FlatUx        & DerivativeFluctuations &  &  \\
+FlatUy        & DerivativeFluctuations &  &  \\
+FlatUz        & DerivativeFluctuations &  &  \\
+FlatVx        & DerivativeFluctuations &  &  \\
+FlatVy        & DerivativeFluctuations &  &  \\
+FlatVz        & DerivativeFluctuations &  &  \\
+FlatWx        & DerivativeFluctuations &  &  \\
+FlatWy        & DerivativeFluctuations &  &  \\
+FlatWz        & DerivativeFluctuations &  &  \\ 
+
+gamma    & Acoustics &  &  \\
+C2       & Acoustics &  &  \\
+Rho_ac   & Acoustics &  &  \\
+Rho_en   & Acoustics &  &  \\
+T_ac     & Acoustics &  &  \\
+T_en     & Acoustics &  &  \\
+M_t      & Acoustics &  &  \\
+rRP      & Acoustics &  &  \\
+rRT      & Acoustics &  &  \\
+
+RhoFluxX & RhoBudget &  &  \\
+RhoFluxY & RhoBudget &  &  \\
+RhoFluxZ & RhoBudget &  &  \\
+RhoDil1  & RhoBudget &  &  \\
+RhoDil2  & RhoBudget &  &  \\
+RhoTrp   & RhoBudget &  &  \\
+RhoProd  & RhoBudget &  &  \\
+RhoConv  & RhoBudget &  & $-$\ra{v}$\p_y$\ra{\rho^\prime \rho^\prime} \\
+
+Pot                & Stratification & potential energy               &  \\
+rRref              & Stratification & background density profile     &  \\
+rTref              & Stratification & background temperature profile &  \\
+BuoyFreq_fr        & Stratification & buoyancy frequency             &  \\
+BuoyFreq_eq        & Stratification & buoyancy frequency             &  \\
+LapseRate_fr       & Stratification & lapse rate                     &  \\
+LapseRate_eq       & Stratification & lapse rate                     &  \\
+PotTemp            & Stratification &  &  \\
+PotTemp_v          & Stratification &  &  \\
+SaturationPressure & Stratification &  &  \\
+rPref              & Stratification & background pressure profile    &  \\
+RelativeHumidity   & Stratification &  &  \\
+Dewpoint           & Stratification & dewpoint temperature           &  \\
+LapseRate_dew      & Stratification &  &  \\
+Source             & Stratification &  &  \\
+rSb                & Stratification &  &  \\
+PotTemp_fr         & Stratification &  &  \\
+PotTemp_eq         & Stratification &  &  \\
+rP0                & Stratification &  &  \\
+rPmod              & Stratification &  &  \\
+Ri_f               & Stratification &  &  \\
+Ri_g               & Stratification &  &  \\
+
+Eta           & Scales & Kolmogorov Scale                      &  \\
+LambdaUx      & Scales & Taylor micro-scale in x-direction     &  \\
+LambdaVy      & Scales & Taylor micro-scale in y-direction     &  \\
+LambdaWz      & Scales & Taylor micro-scale in z-direction     &  \\
+ReLambdaUx    & Scales & Taylor-Reynolds number in x-direction &  \\
+ReLambdaVy    & Scales & Taylor-Reynolds number in y-direction &  \\
+ReLambdaWz    & Scales & Taylor-Reynolds number in z-direction &  \\
+ReLambdaIso   & Scales & Taylor-Reynolds number                &  \\
+
+EddyDiff      & TurbDiffusivities & turbulent eddy diffusivity (for scalar) &  \\
+EddyVisc      & TurbDiffusivities & turbulent eddy viscosity (for momentum) &  \\
+TurbPrandtl   & TurbDiffusivities & turbulent Prandtl number                &  \\
+
+Delta_m       & ShearThicknesses &  &  \\
+Delta_m_p     & ShearThicknesses &  &  \\
+Delta_w       & ShearThicknesses &  &  \\
+
+Delta_hb01    & MixingThicknesses &  &  \\
+Delta_ht01    & MixingThicknesses &  &  \\
+Delta_h01     & MixingThicknesses &  &  \\
+Delta_hb25    & MixingThicknesses &  &  \\
+Delta_ht25    & MixingThicknesses &  &  \\
+Delta_h25     & MixingThicknesses &  &  \\
+mixing-Youngs & MixingThicknesses &  &  \\
+mixing-Cook   & MixingThicknesses &  &  \\
+
+FrictionVelocity  & FrictionTerms & magnitude of surface shear stress        & $u_\star$\\ 
+FrictionThickness & FrictionTerms & height-scale related to surface friction &  $u_\star/f$\\
+FrictionAngle     & FrictionTerms & angle $\alpha$ of negative surface shear stress with the x-axis &  \\
+
+eps_0 & Roughness & Fluid fraction (grid-based approach)   & \\
+eps_1 & Roughness & Solid fraction (grid-based approach)   & \\
+eps_f & Roughness & Fluid fraction (volume-based approach) & \\
+eps_s & Roughness & Solid fraction (volume-based approach) & \\
