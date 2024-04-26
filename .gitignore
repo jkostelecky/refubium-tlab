@@ -9,3 +9,4 @@ tab*.tex
 *.*latexmk
 *.out
 *template.pdf
+*archive/*pdf
