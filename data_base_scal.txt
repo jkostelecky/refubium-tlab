@@ -1,9 +1,9 @@
 rS     & Mean                   & scalar (RA) & \ra{s} \\
-rQ     & Mean                   & & \\
+rQ     & Mean                   & scalar source (RA) & \\
 rS_y   & Mean                   & y-derivative of scalar (RA) & \ra{\p_y s} \\
 fS     & Mean                   & scalar (FA) & \fa{s} \\
 fS_y   & Mean                   & y-derivative of scalar (FA) & \fa{\p_y s}  \\
-fQ     & Mean                   & & \\
+fQ     & Mean                   & scalar source (FA) & \\
 
 Rsu    & Fluctuations           & covariance $R_{su}$ (of scalar $s$ and velocity $u$) & \ra{s^\prime u^\prime} \\
 Rsv    & Fluctuations           & covariance $R_{sv}$ (of scalar $s$ and velocity $v$) & \ra{s^\prime v^\prime} \\
@@ -15,7 +15,7 @@ fS2    & Fluctuations           & scalar variance  (FA) & \fa{s^\prime s^\prime}
 fS3    & Fluctuations           &  & \fa{s^\prime s^\prime s^\prime} \\
 fS4    & Fluctuations           &  & \fa{s^\prime s^\prime s^\prime s^\prime} \\
 
-Rss_t  & RssBudget              & Time-rate of change of $R_{ss}$ & \ra{\p_t R_{ss}} \\
+Rss_t  & RssBudget              & time-rate of change of $R_{ss}$ & \ra{\p_t R_{ss}} \\
 Css    & RssBudget              & advection in y-direction & $-$\fa{v} $\p_y$\ra{s^\prime s^\prime} \\ 
 Pss    & RssBudget              & gradient production & $-2$\ra{s^\prime v^\prime}$\p_y$\fa{s} \\ 
 Ess    & RssBudget              & molecular dissipation & \\
@@ -25,7 +25,7 @@ Tssy_y & RssBudget              & turbulent transport & $\partial_y (\text{Tssy1
 Dss    & RssBudget              & diffusion variable-density term & \\ 
 Qss    & RssBudget              & source & \\ 
              
-Rsu_t  & RsuBudget              & Time-rate of change of $R_{su}$ & \ra{\p_t R_{su}} \\ 
+Rsu_t  & RsuBudget              & time-rate of change of $R_{su}$ & \ra{\p_t R_{su}} \\ 
 Csu    & RsuBudget              & advection in y-direction & $-$\fa{v} $\p_y$\ra{s^\prime u^\prime}\\
 Psu    & RsuBudget              & shear and gradient production & $-$\ra{s^\prime v^\prime}$\p_y$\fa{u} $-$\ra{u^\prime v^\prime}$\p_y$\fa{s}\\
 Esu    & RsuBudget              & molecular dissipation & \\
@@ -39,7 +39,7 @@ Bsu    & RsuBudget              & buoyant production & 0 \\
 Fsu    & RsuBudget              & Coriolis production & $f_y$\ra{s^\prime w^\prime} \\ 
 Qsu    & RsuBudget              & source & \\
              
-Rsv_t  & RsvBudget              & Time-rate of change of $R_{sv}$ & \ra{\p_t R_{sv}} \\ 
+Rsv_t  & RsvBudget              & time-rate of change of $R_{sv}$ & \ra{\p_t R_{sv}} \\ 
 Csv    & RsvBudget              & advection in y-direction & $-$\fa{v} $\p_y$\ra{s^\prime v^\prime} \\   
 Psv    & RsvBudget              & shear and gradient production & $-$\ra{s^\prime v^\prime}$\p_y$\fa{v} $-$\ra{v^\prime v^\prime}$\p_y$\fa{s}\\
 Esv    & RsvBudget              & molecular dissipation & \\ 
@@ -54,7 +54,7 @@ Bsv    & RsvBudget              & buoyant production & \ra{\rho b^\prime s^\prim
 Fsv    & RsvBudget              & Coriolis production & 0\\
 Qsv    & RsvBudget              & source & \\ 
 
-Rsw_t  & RswBudget              & Time-rate of change of $R_{sw}$ & \ra{\p_t R_{sw}} \\ 
+Rsw_t  & RswBudget              & time-rate of change of $R_{sw}$ & \ra{\p_t R_{sw}} \\ 
 Csw    & RswBudget              & advection in y-direction & $-$\fa{v} $\p_y$\ra{s^\prime w^\prime} \\
 Psw    & RswBudget              & shear and gradient production & $-$\ra{s^\prime v^\prime}$\p_y$\fa{w} $-$\ra{v^\prime w^\prime}$\p_y$\fa{s}\\   
 Esw    & RswBudget              & molecular dissipation & \\ 
@@ -81,8 +81,8 @@ S_z4   & DerivativeFluctuations & & \ra{(\p_z s^\prime)^4} \\
 Cs1    & CrossScalars           & & \\ 
 Css1   & CrossScalars           & & \\
 
-Sbcs   & Roughness              & Scalar boundary values applied on solids & \\
-eps_0  & Roughness              & Fluid fraction (grid-based approach)     & \\
-eps_1  & Roughness              & Solid fraction (grid-based approach)     & \\
-eps_f  & Roughness              & Fluid fraction (volume-based approach)   & \\
-eps_s  & Roughness              & Solid fraction (volume-based approach)   & \\
+Sbcs   & Roughness              & scalar boundary values applied on solids & \\
+eps_0  & Roughness              & fluid fraction (grid-based approach)     & \\
+eps_1  & Roughness              & solid fraction (grid-based approach)     & \\
+eps_f  & Roughness              & fluid fraction (volume-based approach)   & \\
+eps_s  & Roughness              & solid fraction (volume-based approach)   & \\

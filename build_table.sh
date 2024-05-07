@@ -16,11 +16,11 @@ rm -f $LOGDIR/cmd1
 for v in ${vlist[@]}; do
     if [ $v = "rS" ]; then
         TYPE="scal"
-        HEADER="Vertical scalar profiles"
+        HEADER="Vertical profiles scalar"
         DTYPE="data_base_scal.txt"
     elif [ $v = "rU" ]; then
         TYPE="flow"
-        HEADER="Vertical velocity profiles"
+        HEADER="Vertical profiles flow"
         DTYPE="data_base_flow.txt"
     elif [ $v = "eps2d" ]; then
         TYPE="ibm"
@@ -30,7 +30,7 @@ for v in ${vlist[@]}; do
     echo "/^${v} / {print}" >> $LOGDIR/cmd1
 done
 
-echo "netcdf-file type: $TYPE $HEADER"
+echo "netcdf-file type: $TYPE, header: $HEADER"
 
 awk -f $LOGDIR/cmd1 $DTYPE > $LOGDIR/vars
 
@@ -61,11 +61,12 @@ echo "\\toprule\multicolumn{3}{c}{\\cellcolor{gray!60} {\\bf  \large{$HEADER} } 
 
 while IFS= read -r line; do
     group=`echo $line | cut -d'&' -f 2`
+
     if [ $group != $old_group ]; then
-	echo "NEW GROUP $group" 
-	echo "\\toprule\multicolumn{3}{c}{\\cellcolor{gray!20} {\\bf  $group } }  \\\\ \\midrule" >> var_list.tex
-	
+        echo "NEW GROUP $group" 
+        echo "\\toprule\multicolumn{3}{c}{\\cellcolor{gray!20} {\\bf  $group } }  \\\\ \\midrule" >> var_list.tex
     fi
+
     echo $line | cut -d'&' -f1 > $LOGDIR/c1
     echo $line | cut -d'&' -f3-> $LOGDIR/c3p
     paste -d'&' $LOGDIR/c1 $LOGDIR/c3p > $LOGDIR/new

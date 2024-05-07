@@ -71,8 +71,8 @@
 \section{Metadata}
 \begin{description}
 \sffamily
-\item[\textcopyright] This work is licensed under the \href{https://creativecommons.org/licenses/by/4.0}{creative commons CC BY 4.0 license}. \\ {\small\light{You must give appropriate credit, provide a link to the license, and indicate if changes were made . You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. }}
-\item[\sffamily Collection] This data set is part of the collection \href{https://refubium.fu-berlin.de/handle/fub188/42710}{\emph{Turbulent wall-bounded flow}\footnote{\url{refubium.fu-berlin.de/handle/fub188/42710}}}.
+\item[\textcopyright] This work is licensed under the \href{https://creativecommons.org/licenses/by/4.0}{creative commons CC BY 4.0 license}. \\ {\small\light{You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. }}
+\item[\sffamily Collection] This dataset is part of the collection \href{https://refubium.fu-berlin.de/handle/fub188/42710}{\emph{Turbulent wall-bounded flow}\footnote{\url{refubium.fu-berlin.de/handle/fub188/42710}}}.
 
 {\small \light{The collection is freely available and hosted by Refubium, the  institutional repository of Freie Universit\"at Berlin.}}
 
@@ -93,11 +93,11 @@
 \subsection{Contents}
 %%% insert description list mentioning each of the contents with a brief description then see, if we still need the text. 
 
-The dataset files, collectively named with grid information and the date of creation of the data on the High-Performance Computing (HPC) system. Each file of the collection contains time-series of a namelist files name dns.ini which is a plain text file holding the configuration of the tLab code (for documentation, please refer to Open-source code available under github.com/turbulencia/tlab). \\
+The dataset files, collectively named with grid information and the date of creation of the data on the High-Performance Computing (HPC) system. Each file of the collection contains time-series of a namelist files name dns.ini which is a plain text file holding the configuration of the tLab code (for documentation, please refer to open-source code available under github.com/turbulencia/tlab). \\
 
 \subsection{Physical case}
 
-This case of simulation conducted with a Reynolds number (Re) of 500, corresponding to a friction Reynolds number \(Re_{\tau}\) of 479, delves into the study of turbulent flows. Utilizing a computational grid of 2048 x 2048 x 192 collocation points with a spatial resolution of 4.1 × 4.1 × 1.05 wall units, the domain size is scaled to \(L_x\) = \(L_y\) = 1.08 \(\Lambda\), where \(\Lambda\) is the Rossby radius. \\
+This case of simulation conducted with a Reynolds number of $Re_D=500$ ($Re_D=DG/\nu$, with the laminar Ekman-layer depth $D=\sqrt{2\nu/ f}$, Coriolis parameter $f$, geostrophic wind $G$ and the kinematic viscosity $\nu$), corresponding to a friction Reynolds number \(Re_{\tau}\) of 479, delves into the study of turbulent flows. Utilizing a computational grid of 2048 x 192 x 2048 collocation points with a spatial resolution of 4.1 x 1.05 x 4.1 wall units, the domain size is scaled to \(L_x\) = \(L_z\) = 1.08 \(\Lambda\), where \(\Lambda=G/f\) is the Rossby radius. \\
 
 \subsection{Variable information}
 
